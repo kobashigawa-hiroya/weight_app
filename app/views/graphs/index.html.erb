@@ -1,2 +1,20 @@
-<h1>Graphs#index</h1>
-<p>Find me in app/views/graphs/index.html.erb</p>
+<!DOCTYPE html>
+<title>ウェイト管理（痩せる）</title>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+​
+<!-- 表示をスマートフォンに対応させる -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+​
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+​
+<body>
+  <!-- 全ページの横幅に上限を設ける（cssは後に追加） -->
+  <div class="graph-container">
+    <%= yield %>
+  </div>
+</body>
+​
+</html>
