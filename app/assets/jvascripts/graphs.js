@@ -136,4 +136,11 @@ document.addEventListener('turbolinks:load', () => {
       drawGraph(from, to)
     }
   }
+  // 新規登録用のカレンダー
+  flatpickr('#new-calendar', {
+    disableMobile: true,
+    // 記録のある日付を選択できないようにする
+    disable: gon.recorded_dates,
+    defaultDate: 'today',
+  })
 })
