@@ -79,12 +79,27 @@ document.addEventListener('turbolinks:load', () => {
   }
 
   // グラフの初期表示
-  drawGraph(A_WEEK_AGO, TODAY) // 引数の日付から今日までのグラフを描く関数
+  drawGraphToToday(A_WEEK_AGO) // 引数の日付から今日までのグラフを描く関数
   const drawGraphToToday = (from) => {
     // データが存在する範囲に修正
     from = maxDate(from, START_DATE)
     let to = minDate(TODAY, END_DATE)
     drawGraph(from, to)
   }
+  document.getElementById('a-week-button').addEventListener('click', () => {
+    drawGraphToToday(A_WEEK_AGO)
+  })
+
+  document.getElementById('two-weeks-button').addEventListener('click', () => {
+    drawGraphToToday(TWO_WEEKS_AGO)
+  })
+
+  document.getElementById('a-month-button').addEventListener('click', () => {
+    drawGraphToToday(A_MONTH_AGO)
+  })
+
+  document.getElementById('three-months-button').addEventListener('click', () => {
+    drawGraphToToday(THREE_MONTHS_AGO)
+  })
 
 })
