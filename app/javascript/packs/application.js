@@ -3,6 +3,17 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+//= require rails-ujs
+//= require activestorage
+//= require Chart.min
+//= require flatpickr
+//= require flatpickr/l10n/ja
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require_tree .
+
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
