@@ -1,5 +1,9 @@
 document.addEventListener('turbolinks:load', () => {
   // ここに， 「app/views/graphs/index.html.erb」の「script」タグ内をここに移動
+  let lineLabel = gon.chart_label
+  let lineData = gon.chart_data
+  // 折れ線グラフのオプション
+
   let lineLabel = ['1/1', '1/2', '1/4', '1/5', '1/6', '1/7']
   let lineData = [60.3, 61.1, 60.8, null, 60.5, 61.4]
 
@@ -42,4 +46,5 @@ document.addEventListener('turbolinks:load', () => {
     data: lineChartData,
     options: lineChartOption
   })
+
 })
