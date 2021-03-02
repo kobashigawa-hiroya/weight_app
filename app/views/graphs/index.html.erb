@@ -53,6 +53,8 @@
     </div>
   </div>
   <canvas id="chart-weight" class="mt-5"></canvas>
+  <%= render 'modal', action: 'new', title: '新規登録' %>
+  <%= render 'modal', action: 'edit', title: '修正' %>
   <p class="mt-4">ボタンを押したときにモーダルが表示されれば，「Bootstrap」の導入はOKです</p>
   <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#test-modal">モーダル</button>
   <!-- ボタンを押したとき，以下のモーダルが出現 -->
