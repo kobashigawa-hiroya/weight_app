@@ -1,5 +1,7 @@
 document.addEventListener('turbolinks:load', () => {
 
+
+
   // 日付の古い方・新しい方を取得する関数
   const minDate = (date1, date2) => (date1 < date2) ? date1 : date2
   const maxDate = (date1, date2) => (date1 > date2) ? date1 : date2
@@ -85,6 +87,9 @@ document.addEventListener('turbolinks:load', () => {
     from = maxDate(from, START_DATE)
     let to = minDate(TODAY, END_DATE)
     drawGraph(from, to)
+    // フォームの開始日・終了日を変更する
+    startCalendarFlatpickr.setDate(from)
+    endCalendarFlatpickr.setDate(to)
   }
   document.getElementById('a-week-button').addEventListener('click', () => {
     drawGraphToToday(A_WEEK_AGO)
@@ -102,4 +107,33 @@ document.addEventListener('turbolinks:load', () => {
     drawGraphToToday(THREE_MONTHS_AGO)
   })
 
+
+  const END_DATE = convertDate(gon.weight_records[gon.weight_records.length - 1].date)
+  // ********** 以下を追加 **********
+  // カレンダーの日本語化
+  flatpickr.localize(flatpickr.l10ns.ja)
+
+  const periodCalendarOption = {
+    disableMobile: true,
+    minDate: START_DATE,
+    maxDate: END_DATE,
+    // 日付選択後のイベント
+    onChange: drawGraphForPeriod
+  }
+
+
+  // カレンダー
+  const startCalendarFlatpickr = flatpickr('#start-calendar', periodCalendarOption)
+  const endCalendarFlatpickr = flatpickr('#end-calendar', periodCalendarOption)
+
+  const drawGraphForPeriod = () => {
+    let from = convertDate(document.getElementById('start-calendar').value)
+    let to = convertDate(document.getElementById('end-calendar').value)
+
+    if (from > to) {
+      alert('終了日は開始日以降の日付に設定して下さい')
+    } else {
+      drawGraph(from, to)
+    }
+  }
 })
