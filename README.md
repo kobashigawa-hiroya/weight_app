@@ -41,6 +41,7 @@ https://original-weight-management.herokuapp.com/users/sign_in
 ### 2.「新規記録」ボタンより、本日の体重を投稿
 ### 3.投稿されたデータがグラフで表示される
 
+![体重管理](https://user-images.githubusercontent.com/56257230/110416935-ef892a80-80d7-11eb-8f17-c809965a1994.gif)
 
  
 
