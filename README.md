@@ -7,6 +7,8 @@
  
 https://original-weight-management.herokuapp.com/users/sign_in
 
+<img width="818" alt="スクリーンショット 2021-03-08 18 58 30" src="https://user-images.githubusercontent.com/56257230/110416830-bbae0500-80d7-11eb-9864-c57aa521f484.png">
+
 
 # アプリの概要
 - 体重データをグラフで視覚化する事で、危機意識とモチベーション向上を図るアプリです。
