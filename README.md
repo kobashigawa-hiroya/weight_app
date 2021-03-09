@@ -1,8 +1,6 @@
 # weight_app
 
 # スリムアップAPP
- <img width="513" alt="スクリーンショット 2021-03-04 21 19 40" src="https://user-images.githubusercontent.com/56257230/109963147-69fc2800-7d2f-11eb-8268-2a54d87b620b.png">
-
 
  
 # DEMO
